@@ -2,6 +2,7 @@ export const profile = {
   name: 'Ashi Sinha',
   pronouns: 'she/her',
   location: 'San Francisco Bay Area, California',
+  resumeUrl: 'https://tinyurl.com/ashisinha-resume',
   homeIntro:
     "I recently completed my MS in Computer Science at UMass Amherst and bring over two years of professional experience working on production software. I am passionate about building software and love turning ideas into reliable products by writing code that ships, scales, and creates meaningful impact in the real world. Through my master's coursework and professional experience, I have strengthened my expertise in software development, distributed systems, machine learning, and reinforcement learning. I am now eager to bring this expertise to my next role, contribute to challenging and impactful projects, and continue learning and growing as an engineer.",
   socials: {

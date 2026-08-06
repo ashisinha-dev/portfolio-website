@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { useScrollSpy } from '../../hooks/useScrollSpy'
+import { useIsTouchDevice, externalLinkProps } from '../../hooks/useIsTouchDevice'
+import { profile } from '../../data/profile'
 import styles from './Nav.module.css'
 
 const LINKS = [
@@ -15,6 +17,7 @@ const LINKS = [
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
   const activeId = useScrollSpy(LINKS.map((link) => link.id))
+  const linkProps = externalLinkProps(useIsTouchDevice())
 
   const handleLinkClick = () => setMenuOpen(false)
 
@@ -37,13 +40,13 @@ export default function Nav() {
               {link.label}
             </a>
           ))}
-          <a href="/resume.pdf" download className={styles.mobileResumeLink} onClick={handleLinkClick}>
+          <a href={profile.resumeUrl} {...linkProps} className={styles.mobileResumeLink} onClick={handleLinkClick}>
             Resume
           </a>
         </nav>
 
         <div className={styles.actions}>
-          <a href="/resume.pdf" download className={styles.resumeButton}>
+          <a href={profile.resumeUrl} {...linkProps} className={styles.resumeButton}>
             Resume
           </a>
           <button

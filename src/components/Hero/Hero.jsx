@@ -40,7 +40,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <a href="/resume.pdf" download className={styles.resumeCta}>
+          <a href={profile.resumeUrl} {...linkProps} className={styles.resumeCta}>
             <FiDownload /> Download Resume
           </a>
         </div>
