@@ -90,7 +90,7 @@ export default function Contact() {
                   <a
                     href={href}
                     target={href.startsWith('http') ? '_blank' : undefined}
-                    rel={href.startsWith('http') ? 'noreferrer' : undefined}
+                    rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
                     className={styles.tileValue}
                   >
                     {value}

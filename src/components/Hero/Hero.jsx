@@ -26,13 +26,13 @@ export default function Hero() {
           </div>
 
           <div className={styles.iconRow}>
-            <a href={profile.socials.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <a href={profile.socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <FiLinkedin />
             </a>
-            <a href={profile.socials.github} target="_blank" rel="noreferrer" aria-label="GitHub">
+            <a href={profile.socials.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <FiGithub />
             </a>
-            <a href={profile.socials.leetcode} target="_blank" rel="noreferrer" aria-label="LeetCode">
+            <a href={profile.socials.leetcode} target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
               <SiLeetcode />
             </a>
           </div>

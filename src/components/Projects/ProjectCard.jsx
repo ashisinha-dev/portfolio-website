@@ -54,19 +54,19 @@ export default function ProjectCard({ project }) {
       {project.github || project.report ? (
         <div className={styles.projectLinks}>
           {project.github && (
-            <a href={project.github} target="_blank" rel="noreferrer" aria-label="GitHub repository">
+            <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub repository">
               <FiGithub />
             </a>
           )}
           {project.report && (
-            <a href={project.report} target="_blank" rel="noreferrer" aria-label="View report">
+            <a href={project.report} target="_blank" rel="noopener noreferrer" aria-label="View report">
               <FiExternalLink />
             </a>
           )}
         </div>
       ) : (
         project.link && (
-          <a href={project.link} target="_blank" rel="noreferrer" className={styles.link}>
+          <a href={project.link} target="_blank" rel="noopener noreferrer" className={styles.link}>
             View Project <FiExternalLink />
           </a>
         )

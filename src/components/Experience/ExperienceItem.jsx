@@ -35,12 +35,12 @@ export default function ExperienceItem({ item }) {
           {(item.github || item.paper) && (
             <div className={styles.itemLinks}>
               {item.github && (
-                <a href={item.github} target="_blank" rel="noreferrer" aria-label="GitHub repository">
+                <a href={item.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub repository">
                   <FiGithub />
                 </a>
               )}
               {item.paper && (
-                <a href={item.paper} target="_blank" rel="noreferrer" aria-label="Read the paper">
+                <a href={item.paper} target="_blank" rel="noopener noreferrer" aria-label="Read the paper">
                   <FiExternalLink />
                 </a>
               )}
