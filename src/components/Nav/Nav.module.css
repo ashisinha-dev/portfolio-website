@@ -132,8 +132,10 @@
     top: 60px;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: var(--space-lg);
+    justify-content: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-xl) var(--space-md);
+    overflow-y: auto;
     background: var(--bg-primary);
     transform: translateX(100%);
     transition: transform var(--transition-fast);
