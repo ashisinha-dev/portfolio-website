@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useScrollSpy } from '../../hooks/useScrollSpy'
 import { useIsTouchDevice, externalLinkProps } from '../../hooks/useIsTouchDevice'
 import { profile } from '../../data/profile'
@@ -18,8 +18,27 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
   const activeId = useScrollSpy(LINKS.map((link) => link.id))
   const linkProps = externalLinkProps(useIsTouchDevice())
+  const linksRef = useRef(null)
+  const hamburgerRef = useRef(null)
 
   const handleLinkClick = () => setMenuOpen(false)
+
+  useEffect(() => {
+    if (!menuOpen) return
+
+    const handleOutsideEvent = (event) => {
+      if (linksRef.current?.contains(event.target)) return
+      if (hamburgerRef.current?.contains(event.target)) return
+      setMenuOpen(false)
+    }
+
+    document.addEventListener('touchstart', handleOutsideEvent)
+    document.addEventListener('mousedown', handleOutsideEvent)
+    return () => {
+      document.removeEventListener('touchstart', handleOutsideEvent)
+      document.removeEventListener('mousedown', handleOutsideEvent)
+    }
+  }, [menuOpen])
 
   return (
     <header className={styles.nav}>
@@ -29,7 +48,7 @@ export default function Nav() {
           <span className={styles.logoText}>Ashi Sinha</span>
         </a>
 
-        <nav className={`${styles.links} ${menuOpen ? styles.linksOpen : ''}`}>
+        <nav ref={linksRef} className={`${styles.links} ${menuOpen ? styles.linksOpen : ''}`}>
           {LINKS.map((link) => (
             <a
               key={link.id}
@@ -50,6 +69,7 @@ export default function Nav() {
             Resume
           </a>
           <button
+            ref={hamburgerRef}
             className={styles.hamburger}
             aria-label="Toggle menu"
             onClick={() => setMenuOpen((open) => !open)}
@@ -61,7 +81,7 @@ export default function Nav() {
         </div>
       </div>
 
-      {menuOpen && <button className={styles.overlay} aria-label="Close menu" onClick={handleLinkClick} />}
+      {menuOpen && <div className={styles.overlay} aria-hidden="true" />}
     </header>
   )
 }
