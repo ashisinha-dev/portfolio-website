@@ -1,0 +1,39 @@
+:root {
+  /* Maroon palette — simple dark base, deep maroon/rose accent */
+  --bg-primary: #16111a;
+  --bg-surface: #211a26;
+  --bg-surface-alt: #2b222f;
+  --text-primary: #f8f5f1;
+  --text-muted: #a89ca0;
+  --accent-indigo: #a3243f;
+  --accent-cyan: #d6536d;
+  --accent-gradient: linear-gradient(135deg, #a3243f 0%, #d6536d 100%);
+  --accent-gradient-animated: linear-gradient(270deg, #a3243f, #d6536d, #a3243f);
+  --border-subtle: rgba(214, 197, 202, 0.15);
+  --border-hover: rgba(214, 83, 109, 0.5);
+  --glow-indigo: rgba(163, 36, 63, 0.4);
+  --pill-bg: rgba(163, 36, 63, 0.12);
+  --pill-border: rgba(163, 36, 63, 0.3);
+
+  --font-body: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+
+  --max-width: 1800px;
+  --content-shift: 0rem;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  --transition-fast: 0.2s ease;
+  --transition-slow: 0.6s ease-out;
+}
+
+/* Breakpoints (referenced in comments, used directly in media queries):
+   sm: 640px, md: 900px, lg: 1200px */

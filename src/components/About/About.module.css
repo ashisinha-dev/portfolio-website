@@ -1,0 +1,45 @@
+.story {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-width: 110ch;
+}
+
+.story p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.techIntro {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.techList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 200px));
+  gap: 0.5rem 2rem;
+}
+
+.techList li {
+  position: relative;
+  padding-left: 1rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.techList li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent-cyan);
+}
+
+@media (max-width: 480px) {
+  .techList {
+    grid-template-columns: 1fr;
+  }
+}

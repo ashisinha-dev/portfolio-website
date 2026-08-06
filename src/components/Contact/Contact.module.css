@@ -1,0 +1,155 @@
+.intro {
+  color: var(--text-muted);
+  margin-bottom: var(--space-lg);
+  max-width: 90ch;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.tiles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.tile {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+
+.tileIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  background: var(--pill-bg);
+  color: var(--accent-indigo);
+  font-size: 1.5rem;
+}
+
+.tileTitle {
+  display: block;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.tileDetail {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.tileValue {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--accent-cyan);
+  margin-top: 0.2rem;
+  width: fit-content;
+}
+
+a.tileValue {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+a.tileValue:hover {
+  color: var(--text-primary);
+}
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+}
+
+.formTitle {
+  font-size: 1.2rem;
+  margin-bottom: var(--space-xs);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.field input,
+.field textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  background: var(--bg-surface-alt);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.85rem;
+  resize: vertical;
+  transition: border-color var(--transition-fast);
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--border-hover);
+}
+
+.submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  background: var(--accent-gradient);
+  color: var(--bg-primary);
+  font-weight: 600;
+  margin-top: var(--space-xs);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.submit:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 24px var(--glow-indigo);
+}
+
+.submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.formStatus {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.formStatus a {
+  color: var(--accent-cyan);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
