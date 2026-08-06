@@ -1,10 +1,13 @@
 import { FiGithub, FiLinkedin, FiDownload } from 'react-icons/fi'
 import { SiLeetcode } from 'react-icons/si'
 import { profile } from '../../data/profile'
+import { useIsTouchDevice, externalLinkProps } from '../../hooks/useIsTouchDevice'
 import photo from '../../assets/photo.jpg'
 import styles from './Hero.module.css'
 
 export default function Hero() {
+  const linkProps = externalLinkProps(useIsTouchDevice())
+
   return (
     <section id="top" className={styles.hero}>
       <div className={styles.inner}>
@@ -26,13 +29,13 @@ export default function Hero() {
           </div>
 
           <div className={styles.iconRow}>
-            <a href={profile.socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href={profile.socials.linkedin} {...linkProps} aria-label="LinkedIn">
               <FiLinkedin />
             </a>
-            <a href={profile.socials.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href={profile.socials.github} {...linkProps} aria-label="GitHub">
               <FiGithub />
             </a>
-            <a href={profile.socials.leetcode} target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
+            <a href={profile.socials.leetcode} {...linkProps} aria-label="LeetCode">
               <SiLeetcode />
             </a>
           </div>

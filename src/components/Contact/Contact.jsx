@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { FiMail, FiMapPin, FiVideo, FiSend } from 'react-icons/fi'
 import { profile } from '../../data/profile'
 import { useReveal } from '../../hooks/useReveal'
+import { useIsTouchDevice, externalLinkProps } from '../../hooks/useIsTouchDevice'
 import SectionHeading from '../shared/SectionHeading'
 import styles from './Contact.module.css'
 
@@ -31,6 +32,7 @@ const INFO_TILES = (socials, location) => [
 
 export default function Contact() {
   const revealRef = useReveal()
+  const linkProps = externalLinkProps(useIsTouchDevice())
   const tiles = INFO_TILES(profile.socials, profile.location)
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const [status, setStatus] = useState('idle') // idle | sending | sent | error
@@ -89,8 +91,7 @@ export default function Contact() {
                 {value && href ? (
                   <a
                     href={href}
-                    target={href.startsWith('http') ? '_blank' : undefined}
-                    rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    {...(href.startsWith('http') ? linkProps : {})}
                     className={styles.tileValue}
                   >
                     {value}
