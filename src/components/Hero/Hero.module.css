@@ -68,6 +68,37 @@
   50% { background-position: 100% 50%; }
 }
 
+.badgeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.25rem;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--badge-border);
+  background: var(--badge-bg);
+  color: var(--badge-color);
+  animation: badgeFloat 3.2s ease-in-out infinite;
+  animation-delay: var(--badge-delay, 0s);
+}
+
+@keyframes badgeFloat {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  50% {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px var(--badge-glow);
+  }
+}
+
 .intro {
   color: var(--text-muted);
   font-size: 0.98rem;
