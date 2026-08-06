@@ -121,31 +121,86 @@
   border-radius: 2px;
 }
 
+.mobileResumeLink {
+  display: none;
+}
+
+.overlay {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .hamburger {
     display: flex;
   }
 
-  .links {
+  .resumeButton {
+    display: none;
+  }
+
+  .overlay {
+    display: block;
     position: fixed;
     inset: 0;
     top: 60px;
+    z-index: 99;
+    border: none;
+    padding: 0;
+    background: rgba(248, 245, 241, 0.12);
+    backdrop-filter: blur(4px);
+  }
+
+  .links {
+    position: fixed;
+    top: 70px;
+    right: var(--space-sm);
+    left: var(--space-sm);
+    z-index: 100;
+    max-height: calc(100vh - 90px);
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--space-md);
-    padding: var(--space-xl) var(--space-md);
+    gap: 0.25rem;
+    padding: var(--space-md);
     overflow-y: auto;
-    background: var(--bg-primary);
-    transform: translateX(100%);
-    transition: transform var(--transition-fast);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    transform: translateY(-12px) scale(0.98);
+    pointer-events: none;
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
   }
 
   .linksOpen {
-    transform: translateX(0);
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
   }
 
   .link {
-    font-size: 1.25rem;
+    font-size: 1.05rem;
+    padding: 0.75rem var(--space-sm);
+    border-radius: var(--radius-sm);
+  }
+
+  .link:hover,
+  .link.active {
+    background: var(--pill-bg);
+  }
+
+  .link::after {
+    display: none;
+  }
+
+  .mobileResumeLink {
+    display: block;
+    margin-top: 0.5rem;
+    padding: 0.75rem var(--space-sm);
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    color: var(--accent-cyan);
+    border: 1px solid var(--accent-cyan);
+    border-radius: var(--radius-sm);
   }
 }

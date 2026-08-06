@@ -37,6 +37,9 @@ export default function Nav() {
               {link.label}
             </a>
           ))}
+          <a href="/resume.pdf" download className={styles.mobileResumeLink} onClick={handleLinkClick}>
+            Resume
+          </a>
         </nav>
 
         <div className={styles.actions}>
@@ -54,6 +57,8 @@ export default function Nav() {
           </button>
         </div>
       </div>
+
+      {menuOpen && <button className={styles.overlay} aria-label="Close menu" onClick={handleLinkClick} />}
     </header>
   )
 }
