@@ -11,7 +11,7 @@ export const profile = {
     "BITS Pilani '22 CSE",
   ],
   homeIntro:
-    "I recently completed my MS in Computer Science at UMass Amherst and bring over two years of professional experience working on production software. I am passionate about building software and love turning ideas into reliable products by writing code that ships, scales, and creates meaningful impact in the real world. Through my master's coursework and professional experience, I have strengthened my expertise in software development, distributed systems, machine learning, and reinforcement learning. I am now eager to bring this expertise to my next role, contribute to challenging and impactful projects, and continue learning and growing as an engineer.",
+    "I completed my MS in Computer Science at UMass Amherst in May 2026 and bring over two years of professional experience working on production software. I am passionate about building software and love turning ideas into reliable products by writing code that ships, scales, and creates meaningful impact in the real world. Through my master's coursework and professional experience, I have strengthened my expertise in software development, distributed systems, machine learning, and reinforcement learning. I am now eager to bring this expertise to my next role, contribute to challenging and impactful projects, and continue learning and growing as an engineer.",
   socials: {
     email: 'sin.ash1998@gmail.com',
     phone: '(413) 450-2251',
@@ -23,7 +23,7 @@ export const profile = {
   },
   aboutParagraphs: [
     'Hi, I’m Ashi, a software engineer and researcher with experience spanning large-scale software development, information retrieval, cloud technologies, and applied AI.',
-    'I recently graduated with an MS in Computer Science from UMass Amherst, where I developed a strong foundation in algorithms, distributed systems, machine learning, natural language processing, and reinforcement learning. I earned my Bachelor’s degree in Computer Science from BITS Pilani.',
+    'I completed my MS in Computer Science from UMass Amherst in May 2026 with a GPA of 3.97/4.0, where I developed a strong foundation in algorithms, distributed systems, machine learning, natural language processing, and reinforcement learning. I earned my Bachelor’s degree in Computer Science from BITS Pilani with a GPA of 8.2/10.',
     'Across more than two years of industry and research experience, I have contributed to scalable software systems, search technologies, full-stack platforms, and AI-powered applications. Most recently, I worked as a Graduate Researcher with IBM Research, where I explored innovative approaches to searching and discovering information across large and complex data collections.',
     'My work across industry and research has strongly shaped the engineer I am today—someone who dives deeply into complex problems, thinks about systems end to end, collaborates closely across teams, and builds effective solutions with performance and usability at the forefront.',
     'Currently, I am actively seeking full-time opportunities in Software Development, Machine Learning Engineering, and Distributed Systems. I’m excited to connect with engineers, researchers, recruiters, and ambitious teams working on challenging problems and impactful products. I look forward to bringing my experience, curiosity, and energy to a team where I can make meaningful contributions while continuing to learn and grow.',
